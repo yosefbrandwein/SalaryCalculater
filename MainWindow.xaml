@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <ListView Name="list" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" Width="50" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="First Name" Width="75" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last Name" Width="100" DisplayMemberBinding="{Binding LastName}" />
+                    <GridViewColumn Header="Bonus" Width="150" DisplayMemberBinding="{Binding Bonus, StringFormat=c}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
